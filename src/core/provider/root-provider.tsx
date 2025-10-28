@@ -1,22 +1,17 @@
-"use client";
+'use client'
 
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react'
 
-import ThemeProvider from "@/core/provider/theme-provider";
+import ThemeProvider from '@/core/provider/theme-provider'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export default function RootProvider({ children }: Props) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="light"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <ThemeProvider disableTransitionOnChange defaultTheme="light" attribute="class" enableSystem>
       {children}
     </ThemeProvider>
-  );
+  )
 }

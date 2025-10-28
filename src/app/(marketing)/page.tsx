@@ -1,7 +1,8 @@
-import { MedalIcon } from "lucide-react";
-import Link from "next/link";
+import Link from 'next/link'
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
+
+import { MedalIcon } from 'lucide-react'
 
 export default function Page() {
   return (
@@ -21,15 +22,14 @@ export default function Page() {
         </div>
 
         <div className="text-sm md:text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto">
-          Collaborate, manage projects, and reach new productivity peaks. From
-          high rises to the home office, the way your team work is unique -
-          accomplish it all with Taskify
+          Collaborate, manage projects, and reach new productivity peaks. From high rises to the
+          home office, the way your team work is unique - accomplish it all with Taskify
         </div>
 
         <Button className="mt-6" size="lg" asChild>
-          <Link href={"/sign-up"}>Get Taskify for free</Link>
+          <Link href={'/sign-up'}>Get Taskify for free</Link>
         </Button>
       </div>
     </div>
-  );
+  )
 }
