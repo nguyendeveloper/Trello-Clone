@@ -12,7 +12,7 @@ export default function RootProvider({ children }: Props) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="light"
       enableSystem
       disableTransitionOnChange
     >
