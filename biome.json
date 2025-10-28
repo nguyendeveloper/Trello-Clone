@@ -19,7 +19,23 @@
     "rules": {
       "recommended": true,
       "suspicious": {
-        "noUnknownAtRules": "off"
+        "noUnknownAtRules": "off",
+        "noArrayIndexKey": "off",
+        "noDocumentCookie": "off"
+      },
+      "a11y": {
+        "useSemanticElements": "off",
+        "useKeyWithClickEvents": "off",
+        "useKeyWithMouseEvents": "off"
+      },
+      "style": {
+        "useImportType": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {
+            "style": "separatedType"
+          }
+        }
       }
     },
     "domains": {
@@ -30,7 +46,38 @@
   "assist": {
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "identifierOrder": "lexicographic",
+            "groups": [
+              ["use-client", "server-only"],
+              ":BLANK_LINE:",
+              {
+                "type": true
+              },
+              ":BLANK_LINE:",
+              [":BUN:", ":NODE:"],
+              ":BLANK_LINE:",
+              [":PACKAGE:"],
+              ":BLANK_LINE:",
+              ["react"],
+              ":BLANK_LINE:",
+              ["@/core/lib", "@/core/lib/**"],
+              ":BLANK_LINE:",
+              ["@/core", "@/core/**"],
+              ":BLANK_LINE:",
+              ["@/components/ui", "@/components/ui/**"],
+              ":BLANK_LINE:",
+              ["next/font/google"],
+              ":BLANK_LINE:",
+              ["lucide-react"],
+              ":BLANK_LINE:",
+              ["@iconify", "@iconify/**"],
+              ":BLANK_LINE:"
+            ]
+          }
+        }
       }
     }
   }
